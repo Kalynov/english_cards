@@ -119,11 +119,11 @@ gulp.task('css-libs', gulp.series('sass', function() {
 }));
 
 
-gulp.task('default', function() {
+gulp.task('watch', function() {
     gulp.watch('app/sass/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
     gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
     gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
-gulp.task('watch', gulp.parallel('css-libs', 'sass','createjson', 'scripts', 'browser-sync', 'default'));
+gulp.task('default', gulp.parallel('css-libs', 'sass','createjson', 'scripts', 'browser-sync', 'watch'));
 
 gulp.task('build', gulp.parallel( 'css-libs','prebuild', 'clean', 'img', 'sass','createjson', 'scripts'));
