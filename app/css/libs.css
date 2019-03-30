@@ -1,0 +1,45 @@
+.dateWrapper {
+  position: relative;
+  top: 70px;
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  background-color: #05abf6;
+  font-family: 'Liberation Sans', arial;
+  -webkit-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  text-align: center; }
+  .dateWrapper .number {
+    -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+            transform: rotate(2deg);
+    font-size: 32px; }
+  .dateWrapper .month {
+    font-size: 20px;
+    -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+            transform: rotate(2deg); }
+
+.titleContainer {
+  text-align: center; }
+  .titleContainer .title {
+    font-weight: bold;
+    font-family: 'Liberation Sans', arial;
+    letter-spacing: 2px; }
