@@ -1,0 +1,37 @@
+
+
+.dateWrapper{
+    position: relative;
+    top: 70px;
+    width:80px;
+    height: 80px;
+    padding:5px;
+    background-color: #05abf6;
+    font-family: 'Liberation Sans', arial;
+    transform: rotate(-2deg);
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    .number{
+        transform: rotate(2deg);
+        font-size: 32px;
+    }
+    .month{
+        font-size: 20px;
+        transform: rotate(2deg);
+    }
+}
+
+.titleContainer{
+    text-align: center;
+    .title{
+        font-weight: bold;
+        font-family: 'Liberation Sans', arial;
+        letter-spacing: 2px;
+    }
+}
+
