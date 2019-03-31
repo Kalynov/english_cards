@@ -8,9 +8,7 @@
     "setup": "npm install && bower install",
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "minify": "gulp minify",
-    "build": "gulp",
-    "wh": "which gulp"
+    "minify": "gulp minify"
   },
   "repository": {
     "type": "git",
