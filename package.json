@@ -6,9 +6,11 @@
   "main": "index.js",
   "scripts": {
     "setup": "npm install && bower install",
-    "start": "gulp",
+    "start": "gulpfile.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "minify": "gulp minify"
+    "minify": "gulp minify",
+    "build": "gulp",
+    "wh": "which gulp"
   },
   "repository": {
     "type": "git",

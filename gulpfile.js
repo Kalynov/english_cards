@@ -128,8 +128,11 @@ gulp.task('default', gulp.parallel('css-libs', 'sass','createjson', 'scripts', '
 
 gulp.task('build', gulp.parallel( 'css-libs','prebuild', 'clean', 'img', 'sass','createjson', 'scripts'));
 
+gulp.task("my",gulpDefault())
+
 function gulpDefault(){
     return  gulp.parallel('css-libs', 'sass','createjson', 'scripts', 'browser-sync', 'watch');
-}
+};
 
-gulpDefault()
+module.exports = gulpDefault;
+
