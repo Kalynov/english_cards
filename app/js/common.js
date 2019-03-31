@@ -6,7 +6,7 @@ function is_touch_device() {
         document.body.className = "tuch"
     }
 };
-
+is_touch_device()
 
 let cardContainer = document.createElement("div")
 cardContainer.className = "cardContainer";

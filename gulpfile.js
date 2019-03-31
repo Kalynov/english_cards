@@ -127,3 +127,9 @@ gulp.task('watch', function() {
 gulp.task('default', gulp.parallel('css-libs', 'sass','createjson', 'scripts', 'browser-sync', 'watch'));
 
 gulp.task('build', gulp.parallel( 'css-libs','prebuild', 'clean', 'img', 'sass','createjson', 'scripts'));
+
+function gulpDefault(){
+    return  gulp.parallel('css-libs', 'sass','createjson', 'scripts', 'browser-sync', 'watch');
+}
+
+gulpDefault()
