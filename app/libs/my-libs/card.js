@@ -34,7 +34,7 @@ function Card(options) {
         sourceContainer.className = "source";
         sourceContainer.textContent = sourceText;
 
-        //translate
+        //translate при нажатии
         elem.onmousedown = hendler
         var timeOut
         function hendler(event){
@@ -42,6 +42,10 @@ function Card(options) {
                 toogleTraslate();
                 $(sourceContainer).animate({opacity:1},200)
             })
+        }
+        elem.ondblclick = deleteCard;
+        function deleteCard(event){
+            elem.remove()
         }
 
         //меняет текст карточки на перевод
