@@ -38,11 +38,11 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 });
 
 gulp.task('clean', gulp.series(function() {
-    var myvar = del.sync('dist');
+    var myvar = del.sync('docs');
     return new Promise(function(resolve, reject) {
         resolve(myvar);
       });
-     // Удаляем папку dist перед сборкой  
+     // Удаляем папку docs перед сборкой  
 }));
 
 gulp.task('img', function() {
@@ -54,7 +54,7 @@ gulp.task('img', function() {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))/**/)
-        .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
+        .pipe(gulp.dest('docs/img')); // Выгружаем на продакшен
 });
 
 
@@ -64,20 +64,20 @@ gulp.task('buildCss',function(){
         'app/css/main.css',
         'app/css/libs.min.css'
         ])
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('docs/css'))
 });
 
 gulp.task('buildFonts', function(){
     return gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
-    .pipe(gulp.dest('dist/fonts'))
+    .pipe(gulp.dest('docs/fonts'))
 });
 gulp.task('buildJs', function(){
     return gulp.src('app/js/**/*') // Переносим скрипты в продакшен
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('docs/js'))
 });
 gulp.task('buildHtml', function(){
     return gulp.src('app/*.html') // Переносим HTML в продакшен
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('prebuild', gulp.series("buildCss","buildFonts","buildJs","buildHtml"));
@@ -89,13 +89,13 @@ gulp.task('clear', function (callback) {
 gulp.task('createjson', function() {
     return gulp.src('app/data/*.json')
         .pipe(jsonFormat(4))
-        .pipe(gulp.dest('dist/data'));
+        .pipe(gulp.dest('docs/data'));
 });
 
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
-        'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+        'app/libs/jquery/docs/jquery.min.js', // Берем jQuery
+        'app/libs/magnific-popup/docs/jquery.magnific-popup.min.js',
         'app/libs/my-libs/*.js'// Берем Magnific Popup
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
